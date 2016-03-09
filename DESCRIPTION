@@ -9,6 +9,7 @@ Depends:
 License: GPL-3
 LazyData: true
 Suggests:
+    dplyr,
     testthat,
     knitr,
     rmarkdown,
@@ -18,4 +19,4 @@ Suggests:
     rhandsontable
 VignetteBuilder: knitr
 Encoding: UTF-8
-RoxygenNote: 5.0.0
+RoxygenNote: 5.0.1
