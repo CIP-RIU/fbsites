@@ -1,6 +1,6 @@
 Package: fbsites
 Title: Fieldbook Sites
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
 Description: Helps maintain information about localities. Meant for being part
     of a bigger application on analyzing fieldbook data.
