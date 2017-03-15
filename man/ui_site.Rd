@@ -4,7 +4,7 @@
 \alias{ui_site}
 \title{shiny UI element}
 \usage{
-ui_site(type = "tab", title = "Site configuration",
+ui_site(type = "tab", title = "List of trial sites",
   name = "resource_site", output = "hot_sites")
 }
 \arguments{

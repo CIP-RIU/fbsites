@@ -8,7 +8,7 @@
 #' @param name a reference name
 #' @param output name of output element
 #' @export
-ui_site <- function(type = "tab", title = "Site configuration", name = "resource_site",
+ui_site <- function(type = "tab", title = "List of trial sites", name = "resource_site",
                     output = "hot_sites"){
   # just only one type
   shinydashboard::tabItem(tabName = name,
@@ -17,7 +17,8 @@ ui_site <- function(type = "tab", title = "Site configuration", name = "resource
 
             shinydashboard::box(width = 12,
                 title = title,
-                rhandsontable::rHandsontableOutput(output, height = 600)
+                #rhandsontable::rHandsontableOutput(output, height = 600)
+                rhandsontable::rHandsontableOutput("tbl_sites", height = 600)
             )
           )
   )
