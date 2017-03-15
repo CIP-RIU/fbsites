@@ -2,8 +2,7 @@ Package: fbsites
 Title: Fieldbook Sites
 Version: 0.0.2
 Authors@R: person("Omar", "Benites", email = "obacc07@gmail.com", role = c("aut", "cre"))
-Description: Helps maintain information about localities. Meant for being part
-    of a bigger application on analyzing fieldbook data.
+Description: The fbsites module aims to add and visualize trial sites.
 Depends:
     R (>= 3.2.2)
 License: GPL-3
