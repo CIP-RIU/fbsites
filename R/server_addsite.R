@@ -169,7 +169,7 @@ server_addsite <- function(input, output, session, values){
                           elev   =  elevation ,
                           crops  =  NA,
                           aez    =  NA,
-                          cont   =  continent ,
+                          cont   =  continent,
                           creg   =  cregion,
                           cntry  =  country,
                           adm4   =  locName, #local = localname = adm4

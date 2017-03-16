@@ -3,7 +3,7 @@ Title: Fieldbook Sites
 Version: 0.0.2
 Authors@R: c( 
              person("Reinhard", "Simon", email = "r.simon@cgiar.org", role = c("aut", "cre")),
-             person("Omar", "Benites", email = "obacc07@gmail.com", role = c("aut", "cre"))
+             person("Omar", "Benites", email = "obacc07@gmail.com", role = c("ctb"))
             )
 Description: The fbsites module aims to add and visualize trial sites.
 Depends:
@@ -23,7 +23,8 @@ Suggests:
     shinyjs,
     countrycode,
     data.table,
-    magrittr
+    magrittr,
+    countrycode
 VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 5.0.1
