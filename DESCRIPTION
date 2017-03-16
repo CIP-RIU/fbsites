@@ -1,7 +1,10 @@
 Package: fbsites
 Title: Fieldbook Sites
 Version: 0.0.2
-Authors@R: person("Omar", "Benites", email = "obacc07@gmail.com", role = c("aut", "cre"))
+Authors@R: c( 
+             person("Reinhard", "Simon", email = "r.simon@cgiar.org", role = c("aut", "cre")),
+             person("Omar", "Benites", email = "obacc07@gmail.com", role = c("aut", "cre"))
+            )
 Description: The fbsites module aims to add and visualize trial sites.
 Depends:
     R (>= 3.2.2)
@@ -15,7 +18,12 @@ Suggests:
     fbglobal,
     shiny,
     shinydashboard,
-    rhandsontable
+    rhandsontable,
+    stringr,
+    shinyjs,
+    countrycode,
+    data.table,
+    magrittr
 VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 5.0.1
