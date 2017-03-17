@@ -19,7 +19,7 @@ server_site <- function(input, output, session, values){
     #print(path)
     geodb_file <- "table_sites.rds"
     #path <- paste(path, geodb_file, sep = "\\")
-    path <- file.path(path, geodb)
+    path <- file.path(path, geodb_file)
     values$geo_vistable <-  readRDS(file = path)
     #     values$geo_db <-  readRDS(file = "sites_table.rds")
 
