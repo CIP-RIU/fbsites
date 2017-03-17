@@ -220,7 +220,10 @@ server_addsite <- function(input, output, session, values){
           path <- fbglobal::get_base_dir()
           #print(path)
           geodb_file <- "table_sites.rds"
-          path <- paste(path, geodb_file, sep = "\\")
+          #path <- paste(path, geodb_file, sep = "\\")
+
+          path <- file.path(path, geodb)
+
           saveRDS(values$geo_db, file = path)
 
           msg <- "Your new locality has been successfully added."
