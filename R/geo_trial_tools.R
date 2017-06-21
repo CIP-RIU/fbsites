@@ -8,8 +8,10 @@
 #' @return vector
 #'
 get_country_list <- function(sites_data){
+
+  sites_data <- arrange_(sites_data, "cntry")
   out <- as.list(stringr::str_trim(unique(as.character(dplyr::select_(sites_data,"cntry")[[1]])),side="both"))
-  out
+
 }
 
 #' Get the country list from CIP Master Trial Sites
@@ -26,17 +28,22 @@ get_filter_locality <- function(sites_data,country_input){
 
 #   filter_country_locality <-  dplyr::select_(data_sites,"SHORTN","FULLN","LOCAL","LATD","LOND","ELEV",
 #                                              "CROPS","AEZ","CONT","CREG","CNTRY","ADM4","ADM3","ADM2","ADM1") %>%
-
+  #sites_data <- arrange_(sites_data, "cntry")
   #dplyr::filter(.,CNTRY==country_input)
   #rule <- ~cntry == country_input
   #filter_country_locality <- dplyr::filter_(sites_data,rule)
+
   filter_country_locality <- dplyr::filter(sites_data, cntry == country_input)
+
+  filter_country_locality <- arrange_(filter_country_locality, "fulln")
+
   filter_sites <- filter_country_locality
   #fullname <- stringr::str_trim(filter_sites$fulln,side = "both")
   fullname <- filter_sites$fulln
   #shortname <- stringr::str_trim(filter_sites$shortn,side="both")
   shortname <- filter_sites$shortn
   sites_labels <- paste(fullname," ","(",shortname,")",sep="")
+
   #sites_list_inputs <- as.list(fullname)
   sites_list_inputs <- as.list(shortname)
   #names(sites_list_inputs) <- sites_labels
@@ -45,7 +52,7 @@ get_filter_locality <- function(sites_data,country_input){
   names(sites_list_inputs) <- sites_labels
   ##out <- sites_list_inputs
   out <- sites_list_inputs
-  out
+
 
 }
 

@@ -222,7 +222,7 @@ server_addsite <- function(input, output, session, values){
           geodb_file <- "table_sites.rds"
           #path <- paste(path, geodb_file, sep = "\\")
 
-          path <- file.path(path, geodb)
+          path <- file.path(path, geodb_file)
 
           saveRDS(values$geo_db, file = path)
 

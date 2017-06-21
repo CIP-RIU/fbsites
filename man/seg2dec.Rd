@@ -19,4 +19,3 @@ Returns the convertion of sexagesimal system to decimal system.
 \author{
 Omar Benites, Franklin Plasencia
 }
-

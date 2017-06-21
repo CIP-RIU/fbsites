@@ -21,4 +21,3 @@ This function gives the locality lists related to country
 \author{
 Omar Benites
 }
-

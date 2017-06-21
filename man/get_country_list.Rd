@@ -19,4 +19,3 @@ Function to get the whole list of countries from CIP trial tites
 \author{
 Omar Benites
 }
-

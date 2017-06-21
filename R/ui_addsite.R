@@ -66,7 +66,7 @@ addsite_ui <- function(type = "tab", title = "New Trial Site", name = "createLis
                                   radioButtons("select_geosystem", label = h4("Type of coordinates system",style = "font-family: 'Arial', cursive;
                                                 font-weight: 500; line-height: 1.1; color: #4d3a7d;"),
                                                 choices = c("Decimal", "Sexagesimal"),
-                                                selected = "Decimal"),
+                                                selected = "Sexagesimal"),
                                 fluidRow(
 
                                  conditionalPanel(
@@ -83,17 +83,7 @@ addsite_ui <- function(type = "tab", title = "New Trial Site", name = "createLis
                                   condition = "input.select_geosystem == 'Sexagesimal'",
 
 
-                                  column(4,  div(style="display:inline-block",
-                                               h4("Longitude"),
-                                               numericInput(inputId = "fbsites_grade_long", label="Grades (°)", value = 10),
-                                               numericInput(inputId = "fbsites_minute_long", label="Minutes (')", value = 10),
-                                               numericInput(inputId = "fbsites_second_long", label="Seconds ('')", value = 10),
-                                               selectInput(inputId =  "fbsites_orientation_long", label="Orientation",
-                                                           choices = c("E","W"), selected = "E" )#,
-                                              ) #end div
-                                 ),
-
-                                  column(4,  div(style="display:inline-block",
+                                 column(4,  div(style="display:inline-block",
                                                 h4("Latitude"),
                                                 numericInput(inputId = "fbsites_grade_lat", label="Grades (°)", value = 10),
                                                 numericInput(inputId = "fbsites_minute_lat", label="Minutes (')", value = 10),
@@ -101,10 +91,20 @@ addsite_ui <- function(type = "tab", title = "New Trial Site", name = "createLis
                                                 selectInput(inputId  =  "fbsites_orientation_lat", label="Orientation",
                                                             choices  = c("N","S"), selected = "N" )#,
                                               ) #end div
-                                  )#,
+                                ),
+
+                                 column(4,  div(style="display:inline-block",
+                                                h4("Longitude"),
+                                                numericInput(inputId = "fbsites_grade_long", label="Grades (°)", value = 10),
+                                                numericInput(inputId = "fbsites_minute_long", label="Minutes (')", value = 10),
+                                                numericInput(inputId = "fbsites_second_long", label="Seconds ('')", value = 10),
+                                                selectInput(inputId =  "fbsites_orientation_long", label="Orientation",
+                                                            choices = c("E","W"), selected = "E" )#,
+                                 ) #end div
+                                 )#,
 
                                 ),
-                                 column(8, shiny::numericInput(inputId = "fbsites_elevation", value = 2000, label = "Elevation (m.s.n.m)", width= "160px" ))
+                                 column(8, shiny::numericInput(inputId = "fbsites_elevation", value = 2000, label = "Elevation (m.a.s.l)", width= "160px" ))
 
                                )# end fluidrow,
 
