@@ -43,8 +43,10 @@ server_addsite <- function(input, output, session, values){
       country_list <- ""
 
     } else {
+
       country_list <- filter(countrycode_data, continent == continent_header)
-      country_list <- select(country_list, country.name)
+      country_list <- select(country_list, country.name.en)
+
     }
 
     shiny::selectizeInput(inputId ="fbsites_country", label = "Select Country",

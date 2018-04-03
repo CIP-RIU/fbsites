@@ -14,8 +14,6 @@ server_site(input, output, session, values)
 \item{session}{shinyserver session}
 
 \item{values}{reactive values}
-
-\item{dom}{target dom element name}
 }
 \description{
 Constructs table

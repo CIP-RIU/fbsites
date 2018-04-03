@@ -6,7 +6,7 @@
 #' @param input shinyserver input
 #' @param output shinyserver output
 #' @param session shinyserver session
-#' @param dom target dom element name
+## @param dom target dom element name
 #' @param values reactive values
 #' @author Reinhard Simon
 #' @export
@@ -16,10 +16,23 @@ server_site <- function(input, output, session, values){
 
   shiny::observe({
     path <- fbglobal::get_base_dir()
+
+    # print(getwd())
+    #
+    # print("path site")
+    # print(path)
+    # print(path)
+    # print(path)
+    # print(path)
+    # print(path)
+
     #print(path)
     geodb_file <- "table_sites.rds"
     #path <- paste(path, geodb_file, sep = "\\")
     path <- file.path(path, geodb_file)
+
+    #print(path)
+
     values$geo_vistable <-  readRDS(file = path)
     #     values$geo_db <-  readRDS(file = "sites_table.rds")
 
