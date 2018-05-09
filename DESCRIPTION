@@ -1,15 +1,22 @@
 Package: fbsites
 Title: Fieldbook Sites
 Version: 0.0.2
-Authors@R: c( 
-             person("Reinhard", "Simon", email = "r.simon@cgiar.org", role = c("aut", "cre")),
-             person("Omar", "Benites", email = "obacc07@gmail.com", role = c("ctb"))
+Authors@R: c(
+             person("Omar", "Benites", email = "obacc07@gmail.com", role = c("aut", "cre")),
+             person("Raul", "Arias", email = "r.arias@cgiar.org", role = c("ctb")),
+             person("Ivan", "Perez", email = "i.perez@cgiar.org", role = c("ctb")),
+             person("Reinhard", "Simon", email = "r.simon@cgiar.org", role = c("ctb")),
+             person("Research Informatic Unit", "RIU", email = "cip-riu@cgiar.org", role = c("cph")),
+             person("International Potato Center", "CIP", email = "cip@cgiar.org", role = c("cph", "ctb"))
             )
+Mantainer:
 Description: The fbsites module aims to add and visualize trial sites.
 Depends:
-    R (>= 3.2.2)
+    R (>= 3.1.1)
 License: GPL-3
 LazyData: true
+Imports:
+    countrycode
 Suggests:
     dplyr,
     testthat,
@@ -21,10 +28,8 @@ Suggests:
     rhandsontable,
     stringr,
     shinyjs,
-    countrycode,
     data.table,
-    magrittr,
-    countrycode
+    magrittr
 VignetteBuilder: knitr
 Encoding: UTF-8
-RoxygenNote: 6.0.1
+RoxygenNote: 5.0.1
