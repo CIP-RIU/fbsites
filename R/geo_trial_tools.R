@@ -71,7 +71,7 @@ filter_geodata <- function(sites_data,country_input,trial_site_abbr){
   #   filter_country_locality <-  dplyr::select_(data_sites,"SHORTN","FULLN","LOCAL","LATD","LOND","ELEV",
   #                                              "CROPS","AEZ","CONT","CREG","CNTRY","ADM4","ADM3","ADM2","ADM1") %>%
   #
-  filter_country_locality <-  dplyr::select_(sites_data,'shortn','fulln','local',
+  filter_country_locality <-  dplyr::select_(sites_data, 'shortn','fulln','local',
                                              'latd','lond','elev','crops','aez',
                                              'cont','creg','cntry','adm4','adm3',
                                              'adm2','adm1') %>%
@@ -213,7 +213,7 @@ filter_geodata_agrofims <- function(sites_data,country_input,trial_site_abbr){
   #   filter_country_locality <-  dplyr::select_(data_sites,"SHORTN","FULLN","LOCAL","LATD","LOND","ELEV",
   #                                              "CROPS","AEZ","CONT","CREG","CNTRY","ADM4","ADM3","ADM2","ADM1") %>%
   #
-  filter_country_locality <-  dplyr::select_(sites_data, "id", "shortn", "Type" , "local", "cntry",
+  filter_country_locality <-  dplyr::select_(sites_data, "id", "userId", "shortn", "Type" , "local", "cntry",
                                                           "adm1", "adm2", "village", "elev", "latd",
                                                           "lond"  ,"nearpop" ,"date_creation") %>%
                               dplyr::filter(.,cntry==country_input)  %>%
@@ -221,3 +221,4 @@ filter_geodata_agrofims <- function(sites_data,country_input,trial_site_abbr){
                               #dplyr::filter(.,FULLN==trail_site)
                               dplyr::filter(.,shortn==trial_site_abbr)
 }
+
